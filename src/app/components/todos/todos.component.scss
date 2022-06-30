@@ -3,6 +3,12 @@
   padding: 10px 15px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
+
+  &:hover {
+    .content {
+      transform: scale(1.01);
+    }
+  }
   cursor: pointer;
 
   &:nth-child(even) {
@@ -18,11 +24,14 @@
   }
 
   .content {
+    transition: 0.3s linear;
     flex: 1 1 100%;
   }
 
-  &.done .content {
-    text-decoration: line-through;
+  &.done {
+    .content {
+      text-decoration: line-through;
+    }
   }
 }
 
